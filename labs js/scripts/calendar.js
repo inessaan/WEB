@@ -13,11 +13,10 @@ let nowDate = new Date(),
 
 
 let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
-console.log(nowDate.getFullYear());
 
 function setMonthCalendar(year,month) {
-    let monthDays = new Date(year, month + 1, 0).getDate(),
-        monthPrefix = new Date(year, month, 0).getDay(),
+    let monthDays = new Date(year, month + 1, 0).getDate(), // возвращает количество дней в выбранном месяце
+        monthPrefix = new Date(year, month, 0).getDay(),  //возвращает номер дня недели
         monthDaysText = '';
 
     monthContainer.textContent = monthName[month];
@@ -30,13 +29,13 @@ function setMonthCalendar(year,month) {
         }
     }
 
-    for (let i = 1; i <= monthDays; i++){
+    for (let i = 1; i <= monthDays; i++){   // заполняем числа - дни
         monthDaysText += '<li>' + i + '</li>';
     }
 
     daysContainer.innerHTML = monthDaysText;
 
-    if (month == nowMonth && year == nowYear){
+    if (month == nowMonth && year == nowYear){    // выделение сегодняшней даты
         days = daysContainer.getElementsByTagName('li');
         days[nowDateNumber].classList.add('date-now');
     }
@@ -49,7 +48,7 @@ setMonthCalendar(nowYear,nowMonth);
 prev.onclick = function () {
     let curDate = new Date(yearContainer.textContent,monthName.indexOf(monthContainer.textContent));
 
-    curDate.setMonth(curDate.getMonth() - 1);
+    curDate.setMonth(curDate.getMonth() - 1); // смещает дату на месяц назад
 
     let curYear = curDate.getFullYear(),
         curMonth = curDate.getMonth();
@@ -60,7 +59,7 @@ prev.onclick = function () {
 next.onclick = function () {
     let curDate = new Date(yearContainer.textContent,monthName.indexOf(monthContainer.textContent));
 
-    curDate.setMonth(curDate.getMonth() + 1);
+    curDate.setMonth(curDate.getMonth() + 1); // смещает дату на месяц вперед
 
     let curYear = curDate.getFullYear(),
         curMonth = curDate.getMonth();
