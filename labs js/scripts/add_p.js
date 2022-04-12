@@ -14,5 +14,5 @@ window.onload = function () {
 			create_p.innerHTML = text_p;
 			document.getElementById("task_5").prepend(create_p);
     }
-}
+	}
 }

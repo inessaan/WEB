@@ -6,7 +6,6 @@ function getRandomInt(min, max) {
 var i = getRandomInt(1,11);
 
 function paint_div() {
-
     document.body.children[i].style.backgroundColor = '#'+((1<<24)*Math.random()|0).toString(16);
   }
 
