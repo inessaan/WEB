@@ -27,7 +27,6 @@ for(let i=0; i < all_children.length; i++)  //собираем все DIV - де
 
 for(let i=0; i < all_div.length; i++)   //смотрим каждого ребенка DIV, если IMG - +к счетчику
 {
-  alert(all_div[i].children[0].tagName);
   for (let j=0; j < all_div[i].children.length; j++)
   {
     if (all_div[i].children[j].tagName == "IMG"){
@@ -37,4 +36,4 @@ for(let i=0; i < all_div.length; i++)   //смотрим каждого ребе
 
 }
 
-message2.textContent = "Всего DIV = " + n + " Всего img = " + k;
+message2.textContent = " Всего img = " + k;

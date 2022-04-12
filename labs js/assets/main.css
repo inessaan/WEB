@@ -171,3 +171,7 @@ body{
 .task3_img{
     width: 30%;
 }
+
+a {
+    text-decoration: none;
+}
