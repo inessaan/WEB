@@ -48,34 +48,67 @@
     </div>
 
     
-    <button class="accordion">Задание 3</button>
+    <button class="accordion">Задание 3 - Вывести количество IMG в DOM-дереве</button>
     <div class="panel" >
         <img class = "task3_img" src="./images/1.jpg" alt="">
         <img class = "task3_img" src="./images/2.jpg" alt="">
         <p class = "count_img_text">Если ты это видишь, ты где то накосячил в скрипте :)</p>
     </div>
 
-    <button class="accordion">Задание 4</button>
+    <button class="accordion">Задание 4 - Каждые 150мс перекрашивать блок</button>
     <div class="panel" id = 'panel'>
         <p >Если ты это видишь, ты где то накосячил в скрипте :)</p>
     </div>
     
-    <button class="accordion">Задание 5</button>
+    <button class="accordion">Задание 5 - Добавление абзаца в обратном порядке</button>
     <div class="panel" id = "task_5">
         <a id="switch" href="#">Добавить абзац</a>
     </div>
 
-    <button class="accordion">Задание 6</button>
+    <button class="accordion">Задание 6 - При наведении мыши картинки меняются</button>
     <div class="panel">
-        <img src="./images/img1.jpg " id="myImg" onmouseover="change()" alt="">
+        <img src="./images/img1.jpg" id="myImg" onmouseover="change()" alt="">
     </div>
 
+    <button class="accordion">Задание 7 - Список с исчезающими сладостями</button>
+     <div class="panel" id="sweet__list_id">
+        <ul >
+            <li class="del">Здесь сладости! (Нажми меня)</li>
+                <ul class="submenu">
+                <li class="del1">Пироженное</li>
+                <li class="del1">Мёд</li>
+                <li class="del2">Конфета</li>
+                </ul>
+            <li class="del3">Сладостей больше нет!</li>
+        </ul>
+    </div>
+
+
+    <button class="accordion">Задание 8 - Плавное появление/исчезание картинки и текста одновременно при наведении мыши</button>
+    <div class="panel">
+        <div class="task-item eight">
+            <p id="textlogo">:С</p>
+            <img id="logo" src="./images/cry.jpg" alt="ма">
+        </div>
+    </div>
+
+    <button class="accordion">Задание 9 - Форма регистрации</button>
+    <div class="panel">
+        <p><a href="myform.html" target="_blank">Перейти на страницу формы регистрации</a>.
+      
+    </p>
+    </div>
+    <script src="./scripts/jquery-3.6.0.js"></script>
     <script src="./scripts/script.js"></script>
+    <!-- Включить только если нужно посмотреть задание 4
+        <script src="./scripts/paint_div.js"></script>-->
     <script src="./scripts/DataTime.js"></script>
     <script src="./scripts/calendar.js"></script>
-    <script src="./scripts/paint_div.js"></script>
     <script src="./scripts/add_p.js"></script>
     <script src="./scripts/change_img.js"></script>
     <script src="./scripts/task3.js"></script>
+    <script src="./scripts/list.js"></script>
+    <script src="./scripts/lostchance.js"></script>
+    <script src="./scripts_for_form/script_for_form.js"></script>
 </body>
 </html>

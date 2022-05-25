@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets_for_form/main_for_form.css">
+    <title>Registration Form</title>
+
+    <title>Document</title>
+  </head>
+<body >
+  <div class="title_block">
+    <p class = "title">Форма регистрации</p>
+  </div>
+<form action='' class='form' onSubmit = "return checkPassword(this)">
+  <p class='field required'>
+    <label class='label required' for='name'>Фамилия</label>
+    <input class='text-input' id='name' name='name' required type='text' placeholder='Иванов' pattern = "^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$">
+  </p>
+  <p class='field required'>
+    <label class='label required' for='name'>Имя</label>
+    <input class='text-input' id='name' name='name' required type='text' placeholder='Иван' pattern = "^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$">
+  </p>
+  <p class='field required'>
+    <label class='label required' for='name'>Отчество</label>
+    <input class='text-input' id='name' name='name' required type='text' placeholder='Иванович' pattern = "^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$">
+  </p>
+  <p class='field required half'>
+    <label class='label' for='email'>E-mail</label>
+    <input class='text-input' id='email' name='email' required type='email'>
+  </p>
+  <p class='field half'>
+    <label class='label' for='phone'>Контактный номер</label>
+    <input class='text-input' id='phone' name='phone' type='phone' pattern = "^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder = "+79991234567">
+  </p>
+  <p class='field required'>
+    <label class='label' for='login'>Логин</label>
+    <input class='text-input' id='login' name='login' required type='text' pattern = "^[а-яА-ЯёЁa-zA][а-яА-ЯёЁa-zA-Z0-9-_\.]{1,20}$">
+  </p>
+  <p class='field half required'>
+    <label class='label' for='password'>Пароль (минимум 8 символов)</label>
+    <input class='text-input' id = "password1" name='password1' required type='password' pattern = "(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">  
+  </p>
+  <p class='field half required'>
+    <label class='label' for='password'>Подтвердите пароль</label>
+    <input class='text-input' id = "password2" name='password2' required type='password'>
+  </p>
+  <div class='field'>
+    <label class='label'>Хобби</label>
+    <ul class='checkboxes'>
+      <li class='checkbox'>
+        <input class='checkbox-input' id='choice-0' name='choice' type='checkbox' value='0'>
+        <label class='checkbox-label' for='choice-0'>Рисование</label>
+      </li>
+      <li class='checkbox'>
+        <input class='checkbox-input' id='choice-1' name='choice' type='checkbox' value='1'>
+        <label class='checkbox-label' for='choice-1'>Программирование</label>
+      </li>
+      <li class='checkbox'>
+        <input class='checkbox-input' id='choice-2' name='choice' type='checkbox' value='2'>
+        <label class='checkbox-label' for='choice-2'>Пение</label>
+      </li>
+      <li class='checkbox'>
+        <input class='checkbox-input' id='choice-3' name='choice' type='checkbox' value='3'>
+        <label class='checkbox-label' for='choice-3'>Танцы</label>
+      </li>
+      <li class='checkbox'>
+        <input class='checkbox-input' id='choice-4' name='choice' type='checkbox' value='4'>
+        <label class='checkbox-label' for='choice-4'>Плавание</label>
+      </li>
+    </ul>
+  </div>
+  <div class='field'>
+    <label class='label'>Пол</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='option-0' name='option' type='radio' value='0'>
+        <label class='option-label' for='option-0'>Мужской</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-1' name='option' type='radio' value='1'>
+        <label class='option-label' for='option-1'>Женский</label>
+      </li>
+    </ul>
+  </div>
+  <p class='field'>
+    <label class='label' for='about'>О себе</label>
+    <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>
+  </p>
+  <p class='field'>
+    <label class='label' for='select'>Факультет</label>
+    <select class='select' id='select' >
+      <option selected value=''></option>
+      <option value='1'>Факультет журналистики</option>
+      <option value='2'>Факультет истории, социологии и международных отношений</option>
+      <option value='3'>Факультет компьютерных технологий и прикладной математики</option>
+      <option value='4'>Факультет математики и компьютерных наук</option>
+      <option value='5'>Факультет педагогики, психологии и коммуникативистики</option>
+      <option value='6'>Факультет романо-германской филологии</option>
+      <option value='7'>Факультет управления и психологии</option>
+      <option value='8'>Физико-технический факультет</option>
+    </select>
+  </p>
+  <p class='field'>
+    <label class='label' for='select'>Курс</label>
+    <select class='select' id='select' >
+      <option selected value=''></option>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+    </select>
+  </p>
+  <div class= "button_block">
+    <input id='button' class = "button" type='submit' value='Отправить'>
+  </div>
+</form>
+<!-- partial -->
+<script src="./scripts_for_form/script_for_form.js"></script>
+<script src="./scripts_for_form/jquery-3.6.0.js"></script>
+<script src="./scripts_for_form/red.js"></script>
+
+</body>
+</html>

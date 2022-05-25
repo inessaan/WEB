@@ -180,3 +180,89 @@ a {
     height: 500px;
     width: 700px;
 }
+
+
+ul li {
+    list-style: none;
+    display: block;
+  }
+  
+.sweet__list span {
+    cursor: pointer;
+    animation: showBlock 2s linear forwards;
+}
+
+
+.submenu {
+    display: block;
+}
+
+.del3 {
+    display: none;
+}
+
+.hidden {
+    color: transparent;
+    animation: hideBlock 5s linear forwards; 
+}
+
+.hidden:hover{
+    opacity: 0;
+}
+
+.chance_center{
+    text-align: center;
+}
+#chance {
+    height: 400px;
+}
+ @keyframes hideBlock {
+    100% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 1;
+    }
+  }
+  .shown{
+    animation: showBlock 5s linear forwards;
+  }
+  .shown:hover{
+    opacity: 0;
+  }
+
+  #true__life{
+    color:rgb(0, 0, 0);
+    text-align: center;
+
+  }
+
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.task-item.eight img {
+      height: 250px;
+      position: relative;
+      z-index: 1;
+      transition: opacity 1s linear;
+      
+    }
+    
+    .task-item.eight {
+     
+      height: 250px;
+      width: 300px;
+    }
+    
+    .task-item.eight p {
+      position: absolute;
+      z-index: 0;
+      padding-left: 40px;
+      padding-top: 100px;
+    }
